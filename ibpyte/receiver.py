@@ -90,6 +90,8 @@ class Receiver(object, metaclass=ReceiverType):
         @param id error id
         @param errorCode error code
         @param errorMsg error message
+        @param advancedOrderRejectJson order reject JSON from FIX
+               https://interactivebrokers.github.io/tws-api/order_submission.html#advanced_order_rejection
         @return None
         """
         params = dict(
