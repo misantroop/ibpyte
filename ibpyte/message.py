@@ -16,7 +16,7 @@ from re import match
 
 from ibapi.wrapper import EWrapper
 from ibapi.client import  EClient
-from ibpythonic.lib import toTypeName
+from ibpyte.lib import toTypeName
 
 
 class SignatureAccumulator(NodeVisitor):

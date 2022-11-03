@@ -4,13 +4,13 @@ from setuptools import setup
 import versioneer
 
 setup(
-    name='ibpythonic',
+    name='ibpyte',
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
-    description='IbPy-like interface for the Interactive Brokers Python API',
-    maintainer='QuantRocket LLC',
-    maintainer_email='support@quantrocket.com',
-    url='https://github.com/quantrocket-llc/ibpythonic',
+    description='Python3 IbPy-like interface for the Interactive Brokers API',
+    maintainer='Andrus Lepik',
+    maintainer_email='alepik@gmail.com',
+    url='https://github.com/misantroop/ibpyte',
     license='BSD License',
-    packages=['ibpythonic', 'ibpythonic/lib', 'ibpythonic/sym'],
+    packages=['ibpyte', 'ibpyte/lib', 'ibpyte/sym'],
 )

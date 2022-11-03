@@ -2,19 +2,16 @@
 # -*- coding: utf-8 -*-
 
 from functools import partial, wraps
-
 from ibapi.ticktype import TickTypeEnum
 
+""" To programmatically generate the TickTypeEnum filters, use something like this sketch:
 
-##
-# To programmatically generate the TickTypeEnum filters, use something like this sketch:
-#
-# vs = [(name, value) for name, value in [(name, getattr(TickTypeEnum, name))
-#                                         for name in dir(TickTypeEnum)] if type(value)==int]
-# titlevalues = [(title[0].lower()+title[1:], value)
-#                for title in [''.join([part.title() for part in name.split('_')])
-#                              for name, value in vs]]
-
+    vs = [(name, value) for name, value in [(name, getattr(TickTypeEnum, name))
+                                            for name in dir(TickTypeEnum)] if type(value)==int]
+    titlevalues = [(title[0].lower()+title[1:], value)
+                   for title in [''.join([part.title() for part in name.split('_')])
+                   for name, value in vs]]
+"""
 
 def messageFilter(function, predicate=lambda msg:True):
     @wraps(function)

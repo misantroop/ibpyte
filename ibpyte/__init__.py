@@ -6,7 +6,7 @@
 #
 # Use:
 #    {{{
-#    from ibpythonic import ibConnection, message
+#    from ibpyte import ibConnection, message
 #
 #    def my_callback(msg):
 #        ...
@@ -19,7 +19,7 @@
 #    con.unregister(my_callback, message.TickSize)
 #    }}}
 #
-from ibpythonic.connection import Connection
+from ibpyte.connection import Connection
 
 
 ##

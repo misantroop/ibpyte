@@ -12,9 +12,9 @@ from functools import wraps
 import threading
 
 from ibapi.client import EClient
-from ibpythonic.lib import toTypeName
-from ibpythonic.lib.log import logThreadErrors
-from ibpythonic.message import registry, clientMethods
+from ibpyte.lib import toTypeName
+from ibpyte.lib.log import logThreadErrors
+from ibpyte.message import registry, clientMethods
 
 
 class Sender(object):

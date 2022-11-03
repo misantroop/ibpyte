@@ -1,4 +1,4 @@
 include LICENSE
 recursive-include demo *
 include versioneer.py
-include ibpythonic/_version.py
+include ibpyte/_version.py

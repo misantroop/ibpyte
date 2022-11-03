@@ -6,8 +6,8 @@
 #
 ##
 import logging
-from ibpythonic.lib import maybeName
-from ibpythonic import message
+from ibpyte.lib import maybeName
+from ibpyte import message
 
 
 class Dispatcher(object):
@@ -22,7 +22,7 @@ class Dispatcher(object):
         """
         self.listeners = listeners if listeners else {}
         self.messageTypes = messageTypes if messageTypes else message.registry
-        self.logger = logger or logging.getLogger("ibpythonic")
+        self.logger = logger or logging.getLogger("ibpyte")
 
     def __call__(self, name, args):
         """ Send message to each listener.
