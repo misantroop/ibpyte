@@ -1,5 +1,5 @@
 # ibpyte
-ibpyte is an IbPy-like interface for the Interactive Brokers Python API.
+ibpyte is an IbPy-like interface for the Interactive Brokers Python API. Updated to support only the latest IBAPI versions (>10.14).
 
 ## Background
 
