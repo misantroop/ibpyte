@@ -83,8 +83,25 @@ class Receiver(object, metaclass=ReceiverType):
         """
         self.dispatcher('error', dict(errorMsg=strval))
 
+    @error.register(object, int, int, str)
+    def error_1(self, id: int, errorCode: int, errorMsg: str) -> None:
+        """ Dispatch an error given an id, code and message.
+
+        @param id error id
+        @param errorCode error code
+        @param errorMsg error message
+               https://interactivebrokers.github.io/tws-api/order_submission.html#advanced_order_rejection
+        @return None
+        """
+        params = dict(
+                        id=id,
+                        errorCode=errorCode,
+                        errorMsg=errorMsg,
+        )
+        self.dispatcher('error', params)        
+        
     @error.register(object, int, int, str, str)
-    def error_1(self, id: int, errorCode: int, errorMsg: str, advancedOrderRejectJson: str) -> None:
+    def error_2(self, id: int, errorCode: int, errorMsg: str, advancedOrderRejectJson: str) -> None:
         """ Dispatch an error given an id, code and message.
 
         @param id error id
