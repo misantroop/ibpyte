@@ -1,9 +1,9 @@
-# ibpyte
-ibpyte is an IbPy-like interface for the Interactive Brokers Python API. Updated to support only the latest IB API versions (>10.14).
+# Ibpyte
+Ibpyte is an IbPy-like interface for the Interactive Brokers Python API. Updated to support only the latest IB API versions (>10.14).
 
 ## Background
 
-ibpyte is a fork of ibpythonic and IbPy.
+Ibpyte is a fork of ibpythonic and IbPy.
 
 ## Installation
 
@@ -19,10 +19,10 @@ pip install ibpyte
 
 ## License
 
-ibpyte is distributed under the New BSD License. See the LICENSE file in the
+Ibpyte is distributed under the New BSD License. See the LICENSE file in the
 release for details.
 
 ## Note
 
-ibpyte is not a product of Interactive Brokers, nor is this project affiliated
-with IB.
+Ibpyte is not a product of Interactive Brokers, nor is this project affiliated
+with Interactive Brokers.
