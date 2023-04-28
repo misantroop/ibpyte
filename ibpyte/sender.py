@@ -8,16 +8,16 @@
 # EClient member objects.
 #
 ##
-from functools import wraps
+#from functools import wraps
 import threading
 
 from ibapi.client import EClient
-from ibpyte.lib import toTypeName
+#from ibpyte.lib import toTypeName
 from ibpyte.lib.log import logThreadErrors
-from ibpyte.message import registry, clientMethods
+from ibpyte.message import clientMethods
 
 
-class Sender(object):
+class Sender:
     """ Encapsulates an EClient instance, and proxies attribute
         lookup to it.
 

@@ -8,8 +8,6 @@
 # types.  In creating the types, it also builds a registry of them
 # that the Receiver class then uses to determine message types.
 ##
-
-import sys
 from ast import NodeVisitor, parse
 from inspect import getsourcefile
 from re import match
@@ -20,9 +18,6 @@ from ibpyte.lib import toTypeName
 
 
 class SignatureAccumulator(NodeVisitor):
-    """
-
-    """
     def __init__(self, classes):
         NodeVisitor.__init__(self)
         self.signatures = []
@@ -30,10 +25,7 @@ class SignatureAccumulator(NodeVisitor):
             self.visit(parse(open(filename).read()))
 
     def visit_FunctionDef(self, node):
-        if sys.version_info[0] < 3:
-            args = [arg.id for arg in node.args.args]
-        else:
-            args = [arg.arg for arg in node.args.args]
+        args = [arg.arg for arg in node.args.args]
         self.signatures.append((node.name, args[1:]))
 
 
@@ -64,12 +56,12 @@ def messageTypeNames():
     """
     def typeNames():
         for types in list(registry.values()):
-            for typ in types:
-                yield typ.typeName
+            for type_ in types:
+                yield type_.typeName
     return set(typeNames())
 
 
-class Message(object):
+class Message:
     """ Base class for Message types.
 
     """

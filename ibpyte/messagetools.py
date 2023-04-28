@@ -34,9 +34,7 @@ lastPriceFilter = partial(messageFilter, predicate=lambda msg:msg.field==TickTyp
 # We don't need functions for filtering by message type because that's
 # what the reader/receiver/dispatcher already does.
 
-
 class TickType:
-
     @classmethod
     def getField(cls, tickType):
         for tick_type_name in TickTypeEnum.idx2name.values():

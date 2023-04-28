@@ -94,9 +94,9 @@ class Receiver(object, metaclass=ReceiverType):
         @return None
         """
         params = dict(
-                        id=id,
-                        errorCode=errorCode,
-                        errorMsg=errorMsg,
+            id=id,
+            errorCode=errorCode,
+            errorMsg=errorMsg,
         )
         self.dispatcher('error', params)        
         
@@ -112,9 +112,9 @@ class Receiver(object, metaclass=ReceiverType):
         @return None
         """
         params = dict(
-                        id=id,
-                        errorCode=errorCode,
-                        errorMsg=errorMsg,
-                        advancedOrderRejectJson=advancedOrderRejectJson
+            id=id,
+            errorCode=errorCode,
+            errorMsg=errorMsg,
+            advancedOrderRejectJson=advancedOrderRejectJson
         )
         self.dispatcher('error', params)

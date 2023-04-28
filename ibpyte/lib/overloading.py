@@ -41,8 +41,6 @@ from types import MethodType as instancemethod
 # Make the environment more like Python 3.0
 __metaclass__ = type
 
-
-
 class overloaded:
     """An implementation of overloaded functions."""
 

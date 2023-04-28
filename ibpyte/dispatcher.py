@@ -10,10 +10,7 @@ from ibpyte.lib import maybeName
 from ibpyte import message
 
 
-class Dispatcher(object):
-    """
-
-    """
+class Dispatcher:
     def __init__(self, listeners=None, messageTypes=None, logger=None):
         """ Initializer.
 

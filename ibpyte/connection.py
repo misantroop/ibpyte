@@ -22,7 +22,7 @@ from ibpyte.receiver import Receiver
 from ibpyte.sender import Sender
 
 
-class Connection(object):
+class Connection:
     """ Encapsulates a connection to TWS.
 
     """
@@ -61,8 +61,12 @@ class Connection(object):
 
         @return True if connected, otherwise raises an exception
         """
-        return self.sender.connect(self.host, self.port, self.clientId,
-                                   self.receiver)
+        return self.sender.connect(
+            self.host,
+            self.port,
+            self.clientId,
+            self.receiver
+        )
 
     @classmethod
     def create(cls, host='localhost', port=7496, clientId=0,
