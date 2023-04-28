@@ -10,7 +10,7 @@
 ##
 from ast import NodeVisitor, parse
 from inspect import getsourcefile
-from re import match
+import re
 
 from ibapi.wrapper import EWrapper
 from ibapi.client import  EClient
@@ -32,14 +32,14 @@ class SignatureAccumulator(NodeVisitor):
 class EClientAccumulator(SignatureAccumulator):
     def getSignatures(self):
         for name, args in self.signatures:
-            if match('(?i)req|cancel|place', name):
+            if re.match('(?i)req|cancel|place', name):
                 yield (name, args)
 
 
 class EWrapperAccumulator(SignatureAccumulator):
     def getSignatures(self):
         for name, args in self.signatures:
-            if match('(?s)(?!((?i)error.*|__init__))', name):
+            if re.match('(?!(error.*|__init__))', name, flags=re.IGNORECASE):
                 yield (name, args)
 
 
