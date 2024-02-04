@@ -27,6 +27,3 @@ from ibpyte.connection import Connection
 # Alternatively, the Connection type can be sub-classed an its
 # 'create' classmethod reused.
 ibConnection = Connection.create
-from ._version import get_versions
-__version__ = get_versions()['version']
-del get_versions
